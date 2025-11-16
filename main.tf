@@ -11,6 +11,7 @@ vpc_security_group_ids = [aws_security_group.my_sg.id]
 tags = {
 Name = "dimu_project"
 }
+}
 
 
 resource "aws_elb" "my_elb" {
@@ -27,7 +28,7 @@ tags = {
 Name = "my_tags"
 }
 
-resource "aws_auto_scaling_group" "my_asg" {
+resource "aws_autoscaling_group" "my_asg" {
 name = "dinu-asg"
 launch_template {
 id = aws_launch_template.my_template.id
